@@ -2,8 +2,6 @@ package com.example.bravo3leek
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
@@ -19,15 +17,9 @@ class HomeActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             if (valdate() == true) {
-                startBravo3leekActivity()
+                start()
             }
         }
-    }
-
-    private fun startBravo3leekActivity() {
-        Handler(Looper.getMainLooper()).postDelayed({
-            start()
-        }, 0)
     }
 
     private fun start() {
